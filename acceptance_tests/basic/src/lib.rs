@@ -37,6 +37,12 @@ mod test_cases {
         x + y
     }
 
+    #[test_case(2 => true; "2 is even")]
+    #[test_case(3 => false; "3 is not even")]
+    fn arrow_to_boolean(x: i32) -> bool {
+        x % 2 == 0
+    }
+
     #[test_case(true)]
     fn keyword_test(x: bool) {
         assert!(x)
